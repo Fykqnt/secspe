@@ -40,7 +40,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
   const initialConversation: Conversation = useMemo(() => {
     const greeting: ChatMessage = {
       id: Date.now(),
-      content: "こんにちは！\n公認会計士試験特化AIチューターのセキスペくんと申します。\nご質問がございましたら、お気軽にお尋ねください。",
+      content: "こんにちは！\nAIチューターのセキスペくんと申します。\nご質問がございましたら、お気軽にお尋ねください。",
       sender: "ai",
       timestamp: new Date(),
     }
@@ -65,7 +65,7 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
     const id = generateId()
     const greeting: ChatMessage = {
       id: Date.now(),
-      content: "こんにちは！\n公認会計士試験特化AIチューターのセキスペくんと申します。\nご質問がございましたら、お気軽にお尋ねください。",
+      content: "こんにちは！\nAIチューターのセキスペくんと申します。\nご質問がございましたら、お気軽にお尋ねください。",
       sender: "ai",
       timestamp: new Date(),
     }

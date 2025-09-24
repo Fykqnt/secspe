@@ -17,8 +17,8 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="bg-primary text-primary-foreground shadow-lg border-b border-primary/20"
     >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto pr-4 pl-1 py-[0.6rem]">
+        <div className="flex items-start justify-between">
           {/* Logo */}
           <motion.div
             className="flex items-center space-x-3"
@@ -27,30 +27,21 @@ export function Header() {
           >
             <div className="flex items-center space-x-2">
               <Image
-                src="/secspe_icon.png"
-                alt="セキスペくんアイコン"
-                width={40}
-                height={40}
-                className="rounded-md"
-                priority
-              />
-              <Image
                 src="/secspe_logo.png"
                 alt="セキスペくんロゴ"
-                width={140}
-                height={28}
-                className="h-7 w-auto"
+                width={277}
+                height={55}
+                className="h-[55px] w-auto bg-transparent"
                 priority
               />
             </div>
             <div>
               <h1 className="sr-only">セキスペくん</h1>
-              <p className="text-xs text-primary-foreground/80">公認会計士試験特化AIチューター</p>
             </div>
           </motion.div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-3">
+          <div className="hidden md:flex items-center space-x-3 self-center">
             <SignedOut>
               <SignInButton mode="modal">
                 <Button variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">

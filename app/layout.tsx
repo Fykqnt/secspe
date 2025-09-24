@@ -7,8 +7,8 @@ import { ClerkProvider } from "@clerk/nextjs"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "セキスペくん - 公認会計士試験特化のAIチューター",
-  description: "公認会計士試験特化のAIチューター。迅速で正確な回答を提供し、ユーザー体験を向上させます。",
+  title: "セキスペくん - 情報処理安全確保支援特化のAIチューター",
+  description: "情報処理安全確保支援特化のAIチューター。迅速で正確な回答を提供し、ユーザー体験を向上させます。",
   generator: "セキスペくん",
 }
 
