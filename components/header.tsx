@@ -17,11 +17,11 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="bg-primary text-primary-foreground shadow-lg border-b border-primary/20"
     >
-      <div className="container mx-auto pr-4 pl-1 py-[0.6rem]">
+      <div className="container mx-auto px-0 py-[0.6rem]">
         <div className="flex items-start justify-between">
           {/* Logo */}
           <motion.div
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-3 ml-[-20px] md:ml-[-28px]"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -41,7 +41,7 @@ export function Header() {
           </motion.div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-3 self-center">
+          <div className="hidden md:flex items-center space-x-3 self-center mr-[-20px] md:mr-[-28px]">
             <SignedOut>
               <SignInButton mode="modal">
                 <Button variant="secondary" className="bg-accent text-accent-foreground hover:bg-accent/90">

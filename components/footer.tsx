@@ -14,7 +14,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="flex items-center space-x-6 text-sm">
             <motion.a
-              href="#"
+              href="/privacy"
               className="hover:text-accent transition-colors"
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -22,7 +22,7 @@ export function Footer() {
               プライバシーポリシー
             </motion.a>
             <motion.a
-              href="#"
+              href="/terms"
               className="hover:text-accent transition-colors"
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -30,12 +30,14 @@ export function Footer() {
               利用規約
             </motion.a>
             <motion.a
-              href="#"
+              href="https://arrowheads.ai"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-accent transition-colors"
               whileHover={{ y: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              お問い合わせ
+              運営会社
             </motion.a>
           </div>
           <div className="text-sm text-primary-foreground/80">© 2025 セキスペくん. All rights reserved.</div>
