@@ -17,12 +17,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+  if (!clerkPublishableKey) {
+    // Log once on the server to help diagnose missing env in CI/CD
+    console.warn(
+      "[Clerk] NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY is missing. Rendering without ClerkProvider."
+    )
+  }
   return (
     <html lang="ja">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <ClerkProvider>
+        {clerkPublishableKey ? (
+          <ClerkProvider publishableKey={clerkPublishableKey}>
+            <Suspense fallback={null}>{children}</Suspense>
+          </ClerkProvider>
+        ) : (
           <Suspense fallback={null}>{children}</Suspense>
-        </ClerkProvider>
+        )}
       </body>
     </html>
   )
