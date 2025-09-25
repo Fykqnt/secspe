@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "./ui/button"
 import { Card } from "./ui/card"
 import { Input } from "./ui/input"
-import { Send, Bot, User, Paperclip, X, ChevronDown } from "lucide-react"
+import { Send, User, Paperclip, X, ChevronDown } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import { useChat } from "@/contexts/chat-context"
@@ -235,9 +235,7 @@ export function ChatInterface() {
       {/* Chat Header */}
       <div className="bg-card border-b border-border p-4">
         <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-            <Bot className="h-6 w-6 text-primary-foreground" />
-          </div>
+          <img src="/secspe_icon.png" alt="セキスペくん" className="w-10 h-10 rounded-full" />
           <div>
             <h2 className="text-xl font-semibold text-card-foreground">セキスペくん アシスタント</h2>
             <p className="text-base text-muted-foreground">オンライン - いつでもお手伝いします</p>
@@ -262,15 +260,13 @@ export function ChatInterface() {
                   message.sender === "user" ? "flex-row-reverse space-x-reverse" : ""
                 }`}
               >
-                <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
-                    message.sender === "user"
-                      ? "bg-accent text-accent-foreground"
-                      : "bg-primary text-primary-foreground"
-                  }`}
-                >
-                  {message.sender === "user" ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
-                </div>
+                {message.sender === "user" ? (
+                  <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-accent text-accent-foreground">
+                    <User className="h-4 w-4" />
+                  </div>
+                ) : (
+                  <img src="/secspe_icon.png" alt="セキスペくん" className="w-8 h-8 rounded-full flex-shrink-0" />
+                )}
                 <Card
                   className={`p-4 ${
                     message.sender === "user" ? "bg-accent text-black dark:text-card-foreground" : "bg-card text-card-foreground"

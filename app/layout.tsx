@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "セキスペくん - 情報処理安全確保支援特化のAIチューター",
   description: "情報処理安全確保支援特化のAIチューター。迅速で正確な回答を提供し、ユーザー体験を向上させます。",
   generator: "セキスペくん",
+  icons: {
+    icon: "/secspe_icon.png",
+  },
 }
 
 export default function RootLayout({
